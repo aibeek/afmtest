@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/logo.png">
-<title>Модули системы и видеокурс обучения — ИС дистанционного тестирования ПФР АФМ</title>
-<meta name="description" content="Модуль обучения с видеоуроками и модуль тестирования: состав, точка сопряжения, программа видеокурса по ПОД/ФТ/ФРОМУ и Рекомендациям ФАТФ.">
+<title>Модуль обучения: видеокурс — ИС дистанционного тестирования ПФР АФМ</title>
+<meta name="description" content="Видеокурс модуля обучения: программа из восьми уроков по ПОД/ФТ/ФРОМУ и Рекомендациям ФАТФ, порядок просмотра и допуск к тестированию.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -24,8 +24,7 @@
     <button class="burger" id="burger" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav class="tnav" id="nav">
       <a href="index.html#novosti">Новости</a>
-      <a href="moduli.html" aria-current="page">Модули</a>
-      <a href="#obuchenie">Обучение</a>
+      <a href="moduli.html" aria-current="page">Обучение</a>
       <a href="index.html#chestnost">Честность теста</a>
       <a href="index.html#etapy">Этапы</a>
       <a href="index.html#voprosy">Вопросы</a>
@@ -43,63 +42,15 @@
 
 <section class="phead">
   <div class="wrap">
-    <p class="crumbs"><a href="index.html">Главная</a> &mdash; Модули системы</p>
-    <h1>Модули системы и видеокурс обучения</h1>
-    <p class="lede">Два укрупнённых модуля верхнего уровня, единственная точка их сопряжения и программа видеоуроков модуля обучения.</p>
+    <p class="crumbs"><a href="index.html">Главная</a> &mdash; Раздел 6.1. Модуль обучения</p>
+    <h1>Модуль обучения: видеокурс</h1>
+    <p class="lede">Теоретическая подготовка проходит в формате коротких видеоуроков. Темы открываются последовательно, факт просмотра фиксируется в профиле кандидата, а после прохождения всей программы открывается промежуточная проверка знаний и допуск к тестированию.</p>
   </div>
 </section>
 <div class="braid"></div>
 
-<section id="moduli">
-  <div class="wrap">
-    <div class="sh">
-      <div class="no">Разделы 5–6</div>
-      <div>
-        <h2>Структура системы и функциональные модули</h2>
-        <p>Система состоит из двух укрупнённых модулей верхнего уровня. Они используют единый профиль кандидата и единую точку входа (SSO), но имеют раздельные права доступа, раздельные базы контента и при необходимости раздельные команды разработки.</p>
-      </div>
-    </div>
-    <div class="body">
-      <div class="two">
-        <div class="top-mod">
-          <h3>Модуль обучения</h3>
-          <ul>
-            <li>Курс «Национальная система ПОД/ФТ/ФРОМУ и Рекомендации ФАТФ»</li>
-            <li>Личный кабинет слушателя и прогресс по темам</li>
-            <li>Промежуточные проверки знаний</li>
-            <li>Фиксация версии программы курса</li>
-          </ul>
-        </div>
-        <div class="bridge" aria-hidden="true">
-          <div class="ln"></div>
-          <span class="b">GET /api/training/status/{id}</span>
-          <small>Единственная точка сопряжения: статус «Курс завершён», дата и версия курса</small>
-        </div>
-        <div class="top-mod">
-          <h3>Модуль тестирования</h3>
-          <ul>
-            <li>Идентификация кандидата и прокторинг</li>
-            <li>Банк вопросов и движок формирования варианта</li>
-            <li>Подсчёт результатов и сертификация</li>
-            <li>Жалобы и передача материалов</li>
-          </ul>
-        </div>
-      </div>
-
-
-    </div>
-  </div>
-</section>
-
 <section id="obuchenie">
   <div class="wrap">
-    <div class="sh">
-      <div class="no">Раздел 6.1</div>
-      <div>
-        <h2>Модуль обучения: видеокурс</h2>
-        <p>Теоретическая подготовка проходит в формате коротких видеоуроков. Темы открываются последовательно, факт просмотра фиксируется в профиле кандидата, а после прохождения всей программы открывается промежуточная проверка знаний и допуск к тестированию.</p>
-      </div>
-    </div>
     <div class="body">
       <div class="vcourse">
         <div class="vplayer">
@@ -267,7 +218,7 @@
   <div class="wrap">
     <div class="cols">
       <div><b>АО «Академия финансового мониторинга «AML ACADEMY»</b>Заказчик и услугодатель по Правилам организации тестирования кандидатов<br>на занятие административных государственных должностей ПФР АФМ.</div>
-      <div><b>Разделы</b><a href="moduli.html">Модули системы</a><br><a href="#obuchenie">Видеокурс обучения</a><br><a href="index.html#roli">Роли и права</a><br><a href="index.html#etapy">Путь кандидата</a><br><a href="index.html#trebovaniya">Требования к ПК</a><br><a href="index.html#voprosy">Жалобы и вопросы</a><br><a href="#" data-auth="in">Вход и регистрация</a><br></div>
+      <div><b>Разделы</b><a href="moduli.html">Видеокурс обучения</a><br><a href="index.html#roli">Роли и права</a><br><a href="index.html#etapy">Путь кандидата</a><br><a href="index.html#trebovaniya">Требования к ПК</a><br><a href="index.html#voprosy">Жалобы и вопросы</a><br><a href="#" data-auth="in">Вход и регистрация</a><br></div>
       <div><b>Контакты</b>Телефон: —<br>Электронная почта: —<br>Адрес: —<br>Горячая линия по фактам коррупции: —</div>
     </div>
     <p class="fine">Страница составлена по техническому заданию на разработку информационной системы тестирования. Документ является рабочим черновиком и подлежит согласованию с заказчиком, специалистом по информационной безопасности и юридической службой перед началом разработки. Фото: пресс-служба АФМ РК.</p>

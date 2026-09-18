@@ -326,3 +326,4 @@ footer.site .fine{margin-top:32px;padding-top:18px;border-top:1px solid rgba(255
 .modcta .hbtn:hover{background:var(--g-700)}
 @media (max-width:600px){.modcta .wrap{padding-top:40px;padding-bottom:40px}.modcta .hbtn{width:100%;text-align:center}}
 .tnav a[aria-current="page"]{color:var(--gold-2);border-bottom-color:var(--gold)}
+#obuchenie>.wrap>.body{margin-left:0;margin-top:0}
