@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/logo.png">
+<title>Модули системы и видеокурс обучения — ИС дистанционного тестирования ПФР АФМ</title>
+<meta name="description" content="Модуль обучения с видеоуроками и модуль тестирования: состав, точка сопряжения, программа видеокурса по ПОД/ФТ/ФРОМУ и Рекомендациям ФАТФ.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержанию</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="em" href="index.html">
+      <img class="sign" src="assets/logo.png" alt="Эмблема AML ACADEMY" width="44" height="44">
+      <span><b>AML ACADEMY</b><i>Академия финансового мониторинга</i></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="tnav" id="nav">
+      <a href="index.html#novosti">Новости</a>
+      <a href="moduli.html" aria-current="page">Модули</a>
+      <a href="#obuchenie">Обучение</a>
+      <a href="index.html#chestnost">Честность теста</a>
+      <a href="index.html#etapy">Этапы</a>
+      <a href="index.html#voprosy">Вопросы</a>
+      <a href="#" data-auth="in">Вход и регистрация</a>
+    </nav>
+    <button class="enter" type="button" data-auth="in">Войти</button>
+    <div class="lang" role="group" aria-label="Язык интерфейса">
+      <button type="button" aria-pressed="true">РУС</button>
+      <button type="button" aria-pressed="false">ҚАЗ</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="phead">
+  <div class="wrap">
+    <p class="crumbs"><a href="index.html">Главная</a> &mdash; Модули системы</p>
+    <h1>Модули системы и видеокурс обучения</h1>
+    <p class="lede">Два укрупнённых модуля верхнего уровня, единственная точка их сопряжения и программа видеоуроков модуля обучения.</p>
+  </div>
+</section>
+<div class="braid"></div>
+
+<section id="moduli">
+  <div class="wrap">
+    <div class="sh">
+      <div class="no">Разделы 5–6</div>
+      <div>
+        <h2>Структура системы и функциональные модули</h2>
+        <p>Система состоит из двух укрупнённых модулей верхнего уровня. Они используют единый профиль кандидата и единую точку входа (SSO), но имеют раздельные права доступа, раздельные базы контента и при необходимости раздельные команды разработки.</p>
+      </div>
+    </div>
+    <div class="body">
+      <div class="two">
+        <div class="top-mod">
+          <h3>Модуль обучения</h3>
+          <ul>
+            <li>Курс «Национальная система ПОД/ФТ/ФРОМУ и Рекомендации ФАТФ»</li>
+            <li>Личный кабинет слушателя и прогресс по темам</li>
+            <li>Промежуточные проверки знаний</li>
+            <li>Фиксация версии программы курса</li>
+          </ul>
+        </div>
+        <div class="bridge" aria-hidden="true">
+          <div class="ln"></div>
+          <span class="b">GET /api/training/status/{id}</span>
+          <small>Единственная точка сопряжения: статус «Курс завершён», дата и версия курса</small>
+        </div>
+        <div class="top-mod">
+          <h3>Модуль тестирования</h3>
+          <ul>
+            <li>Идентификация кандидата и прокторинг</li>
+            <li>Банк вопросов и движок формирования варианта</li>
+            <li>Подсчёт результатов и сертификация</li>
+            <li>Жалобы и передача материалов</li>
+          </ul>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+<section id="obuchenie">
+  <div class="wrap">
+    <div class="sh">
+      <div class="no">Раздел 6.1</div>
+      <div>
+        <h2>Модуль обучения: видеокурс</h2>
+        <p>Теоретическая подготовка проходит в формате коротких видеоуроков. Темы открываются последовательно, факт просмотра фиксируется в профиле кандидата, а после прохождения всей программы открывается промежуточная проверка знаний и допуск к тестированию.</p>
+      </div>
+    </div>
+    <div class="body">
+      <div class="vcourse">
+        <div class="vplayer">
+          <div class="vstage" id="v-stage">
+            <button class="vposter" id="v-poster" type="button" aria-label="Смотреть видеоурок">
+              <span class="ptag" id="v-ptag">Раздел I · Урок 1</span>
+              <span class="pmid"><span class="vplay" aria-hidden="true">&#9654;</span></span>
+              <span class="pbot">
+                <b id="v-ptitle">Национальная система ПОД/ФТ/ФРОМУ: назначение и участники</b>
+                <span><i id="v-pdur" style="font-style:normal">08:40</i><i id="v-pst" style="font-style:normal">Открытый фрагмент</i></span>
+              </span>
+            </button>
+            <p class="vnote" id="v-note" role="status"></p>
+          </div>
+          <div class="vinfo">
+            <h3 id="v-title">Национальная система ПОД/ФТ/ФРОМУ: назначение и участники</h3>
+            <p id="v-desc">Что такое национальная система противодействия отмыванию доходов, кто входит в её контур и какую роль в ней выполняет уполномоченный орган — Агентство по финансовому мониторингу.</p>
+            <ul class="vmeta">
+              <li id="v-m1">Видео — 08:40</li>
+              <li>Конспект темы</li>
+              <li>3 контрольных вопроса</li>
+            </ul>
+          </div>
+        </div>
+
+        <aside class="vlist" aria-label="Программа видеокурса">
+          <div class="vlist-hd">
+            <p class="tag">Программа курса</p>
+            <b>Национальная система ПОД/ФТ/ФРОМУ и Рекомендации ФАТФ</b>
+            <div class="vbar" aria-hidden="true"><i id="v-fill"></i></div>
+            <small id="v-prog">Просмотрено 0 из 8 — всего 1 ч 33 мин</small>
+          </div>
+          <ul class="vitems" id="v-items">
+            <li><button type="button" aria-current="true"
+              data-tag="Раздел I · Урок 1" data-dur="08:40" data-open="1"
+              data-title="Национальная система ПОД/ФТ/ФРОМУ: назначение и участники"
+              data-desc="Что такое национальная система противодействия отмыванию доходов, кто входит в её контур и какую роль в ней выполняет уполномоченный орган — Агентство по финансовому мониторингу."
+              data-src="video/lesson-1.mp4">
+              <span class="vnum">01</span><span class="vttl">Национальная система ПОД/ФТ/ФРОМУ: назначение и участники</span><span class="vdur">08:40</span><span class="vst open">Открытый фрагмент</span>
+            </button></li>
+            <li><button type="button"
+              data-tag="Раздел I · Урок 2" data-dur="12:15"
+              data-title="40 Рекомендаций ФАТФ: структура и логика документа"
+              data-desc="Как устроены Рекомендации ФАТФ, чем отличаются технические требования от оценки эффективности и как результаты взаимных оценок влияют на национальное законодательство."
+              data-src="video/lesson-2.mp4">
+              <span class="vnum">02</span><span class="vttl">40 Рекомендаций ФАТФ: структура и логика документа</span><span class="vdur">12:15</span><span class="vst">Доступно после входа</span>
+            </button></li>
+            <li><button type="button"
+              data-tag="Раздел II · Урок 3" data-dur="10:50"
+              data-title="Субъекты финансового мониторинга и их обязанности"
+              data-desc="Перечень субъектов финансового мониторинга, объём их обязанностей и порядок постановки на учёт в уполномоченном органе."
+              data-src="video/lesson-3.mp4">
+              <span class="vnum">03</span><span class="vttl">Субъекты финансового мониторинга и их обязанности</span><span class="vdur">10:50</span><span class="vst">Доступно после входа</span>
+            </button></li>
+            <li><button type="button"
+              data-tag="Раздел II · Урок 4" data-dur="14:05"
+              data-title="Надлежащая проверка клиента и бенефициарный собственник"
+              data-desc="Идентификация и верификация клиента, установление бенефициарного собственника, упрощённые и усиленные меры проверки, работа с публичными должностными лицами."
+              data-src="video/lesson-4.mp4">
+              <span class="vnum">04</span><span class="vttl">Надлежащая проверка клиента и бенефициарный собственник</span><span class="vdur">14:05</span><span class="vst">Доступно после входа</span>
+            </button></li>
+            <li><button type="button"
+              data-tag="Раздел II · Урок 5" data-dur="11:30"
+              data-title="Риск-ориентированный подход и оценка рисков"
+              data-desc="Национальная и секторальная оценка рисков, построение риск-профиля клиента и распределение ресурсов внутреннего контроля по уровню риска."
+              data-src="video/lesson-5.mp4">
+              <span class="vnum">05</span><span class="vttl">Риск-ориентированный подход и оценка рисков</span><span class="vdur">11:30</span><span class="vst">Доступно после входа</span>
+            </button></li>
+            <li><button type="button"
+              data-tag="Раздел III · Урок 6" data-dur="13:20"
+              data-title="Пороговые и подозрительные операции: критерии и сроки"
+              data-desc="Признаки определения подозрительной операции, пороговые суммы, порядок и сроки направления сообщений в уполномоченный орган."
+              data-src="video/lesson-6.mp4">
+              <span class="vnum">06</span><span class="vttl">Пороговые и подозрительные операции: критерии и сроки</span><span class="vdur">13:20</span><span class="vst">Доступно после входа</span>
+            </button></li>
+            <li><button type="button"
+              data-tag="Раздел III · Урок 7" data-dur="09:55"
+              data-title="Целевые финансовые санкции и противодействие ФРОМУ"
+              data-desc="Перечни организаций и лиц, связанных с терроризмом и распространением оружия массового уничтожения, порядок замораживания операций и сроки проверки перечней."
+              data-src="video/lesson-7.mp4">
+              <span class="vnum">07</span><span class="vttl">Целевые финансовые санкции и противодействие ФРОМУ</span><span class="vdur">09:55</span><span class="vst">Доступно после входа</span>
+            </button></li>
+            <li><button type="button"
+              data-tag="Раздел III · Урок 8" data-dur="12:40"
+              data-title="Внутренний контроль, отчётность и ответственность"
+              data-desc="Правила внутреннего контроля, требования к ответственному сотруднику, хранение документов и ответственность за нарушение законодательства о ПОД/ФТ."
+              data-src="video/lesson-8.mp4">
+              <span class="vnum">08</span><span class="vttl">Внутренний контроль, отчётность и ответственность</span><span class="vdur">12:40</span><span class="vst">Доступно после входа</span>
+            </button></li>
+          </ul>
+        </aside>
+      </div>
+
+      <div class="vfoot">
+        <p>Видеоуроки доступны в личном кабинете слушателя. Прогресс просмотра и версия программы курса сохраняются в профиле и передаются в модуль тестирования через статус «Курс завершён».</p>
+        <button class="go" type="button" data-auth="up">Начать обучение</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="auth-ovl" id="auth-ovl" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+  <div class="auth">
+    <div class="hd">
+      <img src="assets/logo.png" alt="" width="44" height="44">
+      <div><h2 id="auth-title">Личный кабинет кандидата</h2><p>Тестирование ПОД/ФТ/ФРОМУ и Рекомендации ФАТФ</p></div>
+      <button class="x" id="auth-close" aria-label="Закрыть">&times;</button>
+    </div>
+    <div class="bd">
+      <div class="tabs" role="tablist">
+        <button type="button" role="tab" id="tab-in" aria-controls="pane-in" aria-selected="true">Вход</button>
+        <button type="button" role="tab" id="tab-up" aria-controls="pane-up" aria-selected="false">Регистрация</button>
+      </div>
+
+      <section class="pane" id="pane-in" role="tabpanel" aria-labelledby="tab-in">
+        <h3>Вход в личный кабинет</h3>
+        <p class="sub">Используйте ИИН и пароль, указанные при регистрации.</p>
+        <form id="f-in" novalidate>
+          <div class="f" id="w-iin-in"><label for="iin-in">ИИН</label><input id="iin-in" type="text" inputmode="numeric" maxlength="12" autocomplete="username" placeholder="12 цифр"><span class="err">ИИН состоит из 12 цифр</span></div>
+          <div class="f" id="w-pw-in"><label for="pw-in">Пароль</label><input id="pw-in" type="password" autocomplete="current-password"><span class="err">Введите пароль</span></div>
+          <div class="between">
+            <label class="chk" style="margin:0"><input type="checkbox"><span>Запомнить меня</span></label>
+            <a href="#" id="forgot">Забыли пароль?</a>
+          </div>
+          <button class="go" type="submit">Войти</button>
+          <p class="msg" id="m-in" role="status"></p>
+        </form>
+        <p class="note">Вход выполняется через единую точку входа (SSO) — один аккаунт для Модуля обучения и Модуля тестирования. <b>Не передавайте данные учётной записи третьим лицам:</b> прохождение теста подставным лицом влечёт ограничение повторного участия на 1 год.</p>
+      </section>
+
+      <section class="pane" id="pane-up" role="tabpanel" aria-labelledby="tab-up" hidden>
+        <h3>Регистрация кандидата</h3>
+        <p class="sub">Данные должны совпадать с документом, удостоверяющим личность: при идентификации они сверяются автоматически.</p>
+        <form id="f-up" novalidate>
+          <div class="row2">
+            <div class="f" id="w-last"><label for="last">Фамилия</label><input id="last" type="text" autocomplete="family-name"><span class="err">Укажите фамилию</span></div>
+            <div class="f" id="w-first"><label for="first">Имя</label><input id="first" type="text" autocomplete="given-name"><span class="err">Укажите имя</span></div>
+          </div>
+          <div class="f"><label for="mid">Отчество — при наличии</label><input id="mid" type="text" autocomplete="additional-name"></div>
+          <div class="f" id="w-iin"><label for="iin">ИИН</label><input id="iin" type="text" inputmode="numeric" maxlength="12" placeholder="12 цифр"><span class="err">ИИН состоит из 12 цифр</span><span class="tip">По ИИН проверяется завершение курса и отсутствие действующих ограничений на участие.</span></div>
+          <div class="row2">
+            <div class="f" id="w-phone"><label for="phone">Телефон</label><input id="phone" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel"><span class="err">Укажите телефон из 11 цифр</span></div>
+            <div class="f" id="w-mail"><label for="mail">Электронная почта</label><input id="mail" type="email" autocomplete="email"><span class="err">Проверьте адрес почты</span></div>
+          </div>
+          <div class="row2">
+            <div class="f" id="w-pw"><label for="pw">Пароль</label><input id="pw" type="password" autocomplete="new-password"><span class="err">Не менее 8 символов, буквы и цифры</span></div>
+            <div class="f" id="w-pw2"><label for="pw2">Повторите пароль</label><input id="pw2" type="password" autocomplete="new-password"><span class="err">Пароли не совпадают</span></div>
+          </div>
+          <label class="chk"><input type="checkbox" id="pd"><span>Согласен на сбор и обработку персональных данных, включая биометрические данные и видеозапись сессии прокторинга</span></label>
+          <label class="chk"><input type="checkbox" id="rules"><span>Ознакомлен с <a href="#">Правилами организации тестирования</a> и порядком его прохождения</span></label>
+          <div style="height:8px"></div>
+          <button class="go" type="submit">Зарегистрироваться</button>
+          <p class="msg" id="m-up" role="status"></p>
+        </form>
+        <p class="note"><b>Что дальше.</b> После регистрации в личном кабинете появится заявка: оплата услуг Академии, загрузка фото документа и проверка оборудования. Тест станет доступен только при статусе курса «Завершён».</p>
+      </section>
+    </div>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="braid"></div>
+  <div class="wrap">
+    <div class="cols">
+      <div><b>АО «Академия финансового мониторинга «AML ACADEMY»</b>Заказчик и услугодатель по Правилам организации тестирования кандидатов<br>на занятие административных государственных должностей ПФР АФМ.</div>
+      <div><b>Разделы</b><a href="moduli.html">Модули системы</a><br><a href="#obuchenie">Видеокурс обучения</a><br><a href="index.html#roli">Роли и права</a><br><a href="index.html#etapy">Путь кандидата</a><br><a href="index.html#trebovaniya">Требования к ПК</a><br><a href="index.html#voprosy">Жалобы и вопросы</a><br><a href="#" data-auth="in">Вход и регистрация</a><br></div>
+      <div><b>Контакты</b>Телефон: —<br>Электронная почта: —<br>Адрес: —<br>Горячая линия по фактам коррупции: —</div>
+    </div>
+    <p class="fine">Страница составлена по техническому заданию на разработку информационной системы тестирования. Документ является рабочим черновиком и подлежит согласованию с заказчиком, специалистом по информационной безопасности и юридической службой перед началом разработки. Фото: пресс-служба АФМ РК.</p>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
