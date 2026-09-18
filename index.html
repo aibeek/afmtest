@@ -274,6 +274,51 @@ footer.site .fine{margin-top:32px;padding-top:18px;border-top:1px solid rgba(255
   .ticker-row{animation:none}
   .feed-track{scroll-behavior:auto}
 }
+
+/* ── модуль обучения: видеоуроки ── */
+.vcourse{display:grid;grid-template-columns:minmax(0,1fr) 384px;gap:30px;align-items:start}
+.vstage{position:relative;aspect-ratio:16/9;background:var(--g-900);border-top:3px solid var(--gold);overflow:hidden}
+.vstage video,.vstage iframe{width:100%;height:100%;display:block;border:0;background:#000}
+.vposter{position:absolute;inset:0;width:100%;font:inherit;color:#DCE8E4;text-align:left;border:0;cursor:pointer;padding:24px 26px;display:grid;grid-template-rows:auto 1fr auto;background:linear-gradient(155deg,var(--g-700),var(--g-900) 62%)}
+.vposter:after{content:"";position:absolute;right:-70px;top:-70px;width:260px;height:260px;border:1px solid rgba(199,162,74,.28);border-radius:50%}
+.vposter .ptag{font-size:12px;font-weight:600;color:var(--gold-2);letter-spacing:.04em;position:relative;z-index:1}
+.vposter .pmid{display:flex;align-items:center;justify-content:center}
+.vplay{width:66px;height:66px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);background:rgba(10,42,37,.55);display:flex;align-items:center;justify-content:center;font-size:19px;padding-left:5px;transition:background .2s,transform .2s}
+.vposter:hover .vplay{background:var(--gold);color:var(--g-900);transform:scale(1.06)}
+.vposter .pbot{position:relative;z-index:1}
+.vposter .pbot b{display:block;font-family:var(--serif);font-size:20px;color:#fff;font-weight:700;line-height:1.25;max-width:32ch}
+.vposter .pbot span{display:inline-flex;gap:14px;margin-top:9px;font-size:13px;color:#A8C0BA}
+.vnote{position:absolute;left:0;right:0;bottom:0;display:none;background:rgba(10,42,37,.94);border-top:1px solid rgba(199,162,74,.45);color:#CBDDD7;font-size:13.5px;line-height:1.5;padding:14px 26px}
+.vnote.on{display:block}
+.vinfo{margin-top:24px}
+.vinfo h3{font-size:20px}
+.vinfo p{margin-top:11px;color:var(--muted);font-size:15px;max-width:72ch}
+.vmeta{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;padding:0;list-style:none}
+.vmeta li{font-size:12.5px;color:var(--g-700);border:1px solid var(--line);background:var(--paper-2);padding:5px 11px;border-radius:2px}
+
+.vlist{border:1px solid var(--line);background:var(--paper-2)}
+.vlist-hd{padding:20px 22px 18px}
+.vlist-hd .tag{font-size:12px;font-weight:600;color:var(--gold-3)}
+.vlist-hd b{display:block;margin-top:7px;font-family:var(--serif);font-size:16px;line-height:1.3}
+.vbar{height:4px;background:var(--line-2);margin-top:14px}
+.vbar i{display:block;height:100%;width:0;background:var(--gold);transition:width .35s}
+.vlist-hd small{display:block;margin-top:9px;font-size:12.5px;color:var(--muted)}
+.vitems{list-style:none;margin:0;padding:0;max-height:428px;overflow-y:auto}
+.vitems button{width:100%;font:inherit;text-align:left;background:0;color:var(--ink);border:0;border-top:1px solid var(--line-2);padding:14px 22px;cursor:pointer;display:grid;grid-template-columns:26px minmax(0,1fr) auto;gap:4px 12px}
+.vitems button:hover{background:var(--paper)}
+.vitems button[aria-current="true"]{background:var(--paper);box-shadow:inset 3px 0 0 var(--gold)}
+.vitems .vnum{font-family:var(--serif);font-size:14px;color:var(--gold-3);padding-top:2px}
+.vitems .vttl{font-size:14.5px;line-height:1.4}
+.vitems .vdur{font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.vitems .vst{grid-column:2/4;font-size:11.5px;color:var(--muted)}
+.vitems .vst.open{color:var(--gold-3);font-weight:600}
+.vitems .vst.done{color:var(--ok);font-weight:600}
+.vfoot{margin-top:30px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:22px}
+.vfoot p{color:var(--muted);font-size:14px;max-width:62ch}
+.vfoot .go{font:inherit;font-size:14.5px;font-weight:600;color:#fff;background:var(--g-900);border:0;border-radius:3px;padding:12px 20px;cursor:pointer;flex:none}
+.vfoot .go:hover{background:var(--g-700)}
+@media (max-width:1000px){.vcourse{grid-template-columns:1fr}.vitems{max-height:none}}
+@media (max-width:600px){.vposter{padding:18px}.vposter .pbot b{font-size:17px}.vplay{width:54px;height:54px}}
 </style>
 </head>
 <body>
@@ -289,6 +334,7 @@ footer.site .fine{margin-top:32px;padding-top:18px;border-top:1px solid rgba(255
     <nav class="tnav" id="nav">
       <a href="#novosti">Новости</a>
       <a href="#moduli">Модули</a>
+      <a href="#obuchenie">Обучение</a>
       <a href="#chestnost">Честность теста</a>
       <a href="#etapy">Этапы</a>
       <a href="#voprosy">Вопросы</a>
@@ -483,6 +529,116 @@ footer.site .fine{margin-top:32px;padding-top:18px;border-top:1px solid rgba(255
   </div>
 </section>
 
+<section id="obuchenie">
+  <div class="wrap">
+    <div class="sh">
+      <div class="no">Раздел 6.1</div>
+      <div>
+        <h2>Модуль обучения: видеокурс</h2>
+        <p>Теоретическая подготовка проходит в формате коротких видеоуроков. Темы открываются последовательно, факт просмотра фиксируется в профиле кандидата, а после прохождения всей программы открывается промежуточная проверка знаний и допуск к тестированию.</p>
+      </div>
+    </div>
+    <div class="body">
+      <div class="vcourse">
+        <div class="vplayer">
+          <div class="vstage" id="v-stage">
+            <button class="vposter" id="v-poster" type="button" aria-label="Смотреть видеоурок">
+              <span class="ptag" id="v-ptag">Раздел I · Урок 1</span>
+              <span class="pmid"><span class="vplay" aria-hidden="true">&#9654;</span></span>
+              <span class="pbot">
+                <b id="v-ptitle">Национальная система ПОД/ФТ/ФРОМУ: назначение и участники</b>
+                <span><i id="v-pdur" style="font-style:normal">08:40</i><i id="v-pst" style="font-style:normal">Открытый фрагмент</i></span>
+              </span>
+            </button>
+            <p class="vnote" id="v-note" role="status"></p>
+          </div>
+          <div class="vinfo">
+            <h3 id="v-title">Национальная система ПОД/ФТ/ФРОМУ: назначение и участники</h3>
+            <p id="v-desc">Что такое национальная система противодействия отмыванию доходов, кто входит в её контур и какую роль в ней выполняет уполномоченный орган — Агентство по финансовому мониторингу.</p>
+            <ul class="vmeta">
+              <li id="v-m1">Видео — 08:40</li>
+              <li>Конспект темы</li>
+              <li>3 контрольных вопроса</li>
+            </ul>
+          </div>
+        </div>
+
+        <aside class="vlist" aria-label="Программа видеокурса">
+          <div class="vlist-hd">
+            <p class="tag">Программа курса</p>
+            <b>Национальная система ПОД/ФТ/ФРОМУ и Рекомендации ФАТФ</b>
+            <div class="vbar" aria-hidden="true"><i id="v-fill"></i></div>
+            <small id="v-prog">Просмотрено 0 из 8 — всего 1 ч 33 мин</small>
+          </div>
+          <ul class="vitems" id="v-items">
+            <li><button type="button" aria-current="true"
+              data-tag="Раздел I · Урок 1" data-dur="08:40" data-open="1"
+              data-title="Национальная система ПОД/ФТ/ФРОМУ: назначение и участники"
+              data-desc="Что такое национальная система противодействия отмыванию доходов, кто входит в её контур и какую роль в ней выполняет уполномоченный орган — Агентство по финансовому мониторингу."
+              data-src="video/lesson-1.mp4">
+              <span class="vnum">01</span><span class="vttl">Национальная система ПОД/ФТ/ФРОМУ: назначение и участники</span><span class="vdur">08:40</span><span class="vst open">Открытый фрагмент</span>
+            </button></li>
+            <li><button type="button"
+              data-tag="Раздел I · Урок 2" data-dur="12:15"
+              data-title="40 Рекомендаций ФАТФ: структура и логика документа"
+              data-desc="Как устроены Рекомендации ФАТФ, чем отличаются технические требования от оценки эффективности и как результаты взаимных оценок влияют на национальное законодательство."
+              data-src="video/lesson-2.mp4">
+              <span class="vnum">02</span><span class="vttl">40 Рекомендаций ФАТФ: структура и логика документа</span><span class="vdur">12:15</span><span class="vst">Доступно после входа</span>
+            </button></li>
+            <li><button type="button"
+              data-tag="Раздел II · Урок 3" data-dur="10:50"
+              data-title="Субъекты финансового мониторинга и их обязанности"
+              data-desc="Перечень субъектов финансового мониторинга, объём их обязанностей и порядок постановки на учёт в уполномоченном органе."
+              data-src="video/lesson-3.mp4">
+              <span class="vnum">03</span><span class="vttl">Субъекты финансового мониторинга и их обязанности</span><span class="vdur">10:50</span><span class="vst">Доступно после входа</span>
+            </button></li>
+            <li><button type="button"
+              data-tag="Раздел II · Урок 4" data-dur="14:05"
+              data-title="Надлежащая проверка клиента и бенефициарный собственник"
+              data-desc="Идентификация и верификация клиента, установление бенефициарного собственника, упрощённые и усиленные меры проверки, работа с публичными должностными лицами."
+              data-src="video/lesson-4.mp4">
+              <span class="vnum">04</span><span class="vttl">Надлежащая проверка клиента и бенефициарный собственник</span><span class="vdur">14:05</span><span class="vst">Доступно после входа</span>
+            </button></li>
+            <li><button type="button"
+              data-tag="Раздел II · Урок 5" data-dur="11:30"
+              data-title="Риск-ориентированный подход и оценка рисков"
+              data-desc="Национальная и секторальная оценка рисков, построение риск-профиля клиента и распределение ресурсов внутреннего контроля по уровню риска."
+              data-src="video/lesson-5.mp4">
+              <span class="vnum">05</span><span class="vttl">Риск-ориентированный подход и оценка рисков</span><span class="vdur">11:30</span><span class="vst">Доступно после входа</span>
+            </button></li>
+            <li><button type="button"
+              data-tag="Раздел III · Урок 6" data-dur="13:20"
+              data-title="Пороговые и подозрительные операции: критерии и сроки"
+              data-desc="Признаки определения подозрительной операции, пороговые суммы, порядок и сроки направления сообщений в уполномоченный орган."
+              data-src="video/lesson-6.mp4">
+              <span class="vnum">06</span><span class="vttl">Пороговые и подозрительные операции: критерии и сроки</span><span class="vdur">13:20</span><span class="vst">Доступно после входа</span>
+            </button></li>
+            <li><button type="button"
+              data-tag="Раздел III · Урок 7" data-dur="09:55"
+              data-title="Целевые финансовые санкции и противодействие ФРОМУ"
+              data-desc="Перечни организаций и лиц, связанных с терроризмом и распространением оружия массового уничтожения, порядок замораживания операций и сроки проверки перечней."
+              data-src="video/lesson-7.mp4">
+              <span class="vnum">07</span><span class="vttl">Целевые финансовые санкции и противодействие ФРОМУ</span><span class="vdur">09:55</span><span class="vst">Доступно после входа</span>
+            </button></li>
+            <li><button type="button"
+              data-tag="Раздел III · Урок 8" data-dur="12:40"
+              data-title="Внутренний контроль, отчётность и ответственность"
+              data-desc="Правила внутреннего контроля, требования к ответственному сотруднику, хранение документов и ответственность за нарушение законодательства о ПОД/ФТ."
+              data-src="video/lesson-8.mp4">
+              <span class="vnum">08</span><span class="vttl">Внутренний контроль, отчётность и ответственность</span><span class="vdur">12:40</span><span class="vst">Доступно после входа</span>
+            </button></li>
+          </ul>
+        </aside>
+      </div>
+
+      <div class="vfoot">
+        <p>Видеоуроки доступны в личном кабинете слушателя. Прогресс просмотра и версия программы курса сохраняются в профиле и передаются в модуль тестирования через статус «Курс завершён».</p>
+        <button class="go" type="button" data-auth="up">Начать обучение</button>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="roli">
   <div class="wrap">
     <div class="sh">
@@ -667,7 +823,7 @@ footer.site .fine{margin-top:32px;padding-top:18px;border-top:1px solid rgba(255
   <div class="wrap">
     <div class="cols">
       <div><b>АО «Академия финансового мониторинга «AML ACADEMY»</b>Заказчик и услугодатель по Правилам организации тестирования кандидатов<br>на занятие административных государственных должностей ПФР АФМ.</div>
-      <div><b>Разделы</b><a href="#moduli">Модули системы</a><br><a href="#roli">Роли и права</a><br><a href="#etapy">Путь кандидата</a><br><a href="#trebovaniya">Требования к ПК</a><br><a href="#voprosy">Жалобы и вопросы</a><br><a href="#" data-auth="in">Вход и регистрация</a><br></div>
+      <div><b>Разделы</b><a href="#moduli">Модули системы</a><br><a href="#obuchenie">Видеокурс обучения</a><br><a href="#roli">Роли и права</a><br><a href="#etapy">Путь кандидата</a><br><a href="#trebovaniya">Требования к ПК</a><br><a href="#voprosy">Жалобы и вопросы</a><br><a href="#" data-auth="in">Вход и регистрация</a><br></div>
       <div><b>Контакты</b>Телефон: —<br>Электронная почта: —<br>Адрес: —<br>Горячая линия по фактам коррупции: —</div>
     </div>
     <p class="fine">Страница составлена по техническому заданию на разработку информационной системы тестирования. Документ является рабочим черновиком и подлежит согласованию с заказчиком, специалистом по информационной безопасности и юридической службой перед началом разработки. Фото: пресс-служба АФМ РК.</p>
@@ -806,6 +962,80 @@ footer.site .fine{margin-top:32px;padding-top:18px;border-top:1px solid rgba(255
     mark(); play();
   })();
 
+
+  // ── модуль обучения: видеоуроки ──
+  (function(){
+    var stage=document.getElementById('v-stage'); if(!stage) return;
+    var poster=document.getElementById('v-poster'),
+        items=Array.prototype.slice.call(document.querySelectorAll('#v-items button')),
+        note=document.getElementById('v-note'),
+        fill=document.getElementById('v-fill'), prog=document.getElementById('v-prog'),
+        seen={}, cur=0, media=null;
+
+    try{ seen=JSON.parse(localStorage.getItem('aml-course')||'{}'); }catch(e){ seen={}; }
+
+    function save(){ try{ localStorage.setItem('aml-course',JSON.stringify(seen)); }catch(e){} }
+
+    function drop(){ if(media){ media.remove(); media=null; } note.classList.remove('on'); poster.style.display=''; }
+
+    function mark(){
+      var n=0;
+      items.forEach(function(b,i){
+        var st=b.querySelector('.vst');
+        if(seen[i]){ n++; st.className='vst done'; st.textContent='Просмотрено'; }
+        else if(b.dataset.open){ st.className='vst open'; st.textContent='Открытый фрагмент'; }
+      });
+      fill.style.width=Math.round(n/items.length*100)+'%';
+      prog.textContent='Просмотрено '+n+' из '+items.length+' — всего 1 ч 33 мин';
+    }
+
+    function select(i){
+      cur=i; drop();
+      var b=items[i];
+      items.forEach(function(x){ x.setAttribute('aria-current',x===b?'true':'false'); });
+      document.getElementById('v-ptag').textContent=b.dataset.tag;
+      document.getElementById('v-ptitle').textContent=b.dataset.title;
+      document.getElementById('v-pdur').textContent=b.dataset.dur;
+      document.getElementById('v-pst').textContent=seen[i]?'Просмотрено':(b.dataset.open?'Открытый фрагмент':'Доступно после входа');
+      document.getElementById('v-title').textContent=b.dataset.title;
+      document.getElementById('v-desc').textContent=b.dataset.desc;
+      document.getElementById('v-m1').textContent='Видео — '+b.dataset.dur;
+    }
+
+    function fail(){
+      poster.style.display='';
+      note.textContent='Видеофайл урока подключается из медиахранилища Академии. В демонстрационной версии страницы запись не размещена.';
+      note.classList.add('on');
+    }
+
+    function play(){
+      var b=items[cur];
+      if(!b.dataset.open && !seen[cur]){
+        var t=document.querySelector('header [data-auth="in"]'); if(t){ t.click(); }
+        return;
+      }
+      drop();
+      if(b.dataset.embed){
+        media=document.createElement('iframe');
+        media.src=b.dataset.embed;
+        media.title=b.dataset.title;
+        media.allow='accelerometer; autoplay; encrypted-media; picture-in-picture; fullscreen';
+        media.setAttribute('allowfullscreen','');
+      }else{
+        media=document.createElement('video');
+        media.src=b.dataset.src; media.controls=true; media.autoplay=true; media.playsInline=true;
+        media.addEventListener('error',fail);
+      }
+      stage.insertBefore(media,note);
+      poster.style.display='none';
+      seen[cur]=1; save(); mark();
+      document.getElementById('v-pst').textContent='Просмотрено';
+    }
+
+    items.forEach(function(b,i){ b.addEventListener('click',function(){ select(i); play(); }); });
+    poster.addEventListener('click',play);
+    mark(); select(0);
+  })();
   var l=document.querySelectorAll('.lang button');
   l.forEach(function(x){x.addEventListener('click',function(){l.forEach(function(y){y.setAttribute('aria-pressed','false')});x.setAttribute('aria-pressed','true');});});
 })();
